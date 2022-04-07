@@ -1,7 +1,7 @@
 from rest_framework import serializers
 from . models import vehicles
 
-class vehiclesSerializer(serializers.Hyperlinkmodelserializer):
-    class meta:
+class vehiclesSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
         model = vehicles
-        fields = ('name', 'description')
+        fields = ('id', 'name', 'description')
